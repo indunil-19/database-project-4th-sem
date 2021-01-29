@@ -1,0 +1,110 @@
+<%- include('header'), {user} %>
+<div class="container">
+
+    <div class="row justify-content-center" style="margin-top: 100px;">
+
+        <div><% if (error) {%>
+            <div class="alert alert-danger" role="alert">
+                <%=error%>
+               </div>
+        <% } %></div>
+        
+    
+    
+    </div>
+
+
+
+            <div class="row justify-content-center">
+                <form method="post" action="/register" style="max-width: 500px; border:rgba(0, 0, 0, 0.247) solid 2px; padding: 30px;">
+                    <div class="form-outline mb-4">
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form2Example1" name="NIC" class="form-control" value="<%=NIC%>"/>
+                            <label class="form-label" for="form2Example1">NIC number</label>
+                          </div>
+
+
+                        <input type="text" id="form2Example1" name="first_name" class="form-control" value="<%=first_name%>"/>
+                        <label class="form-label" for="form2Example1">First Name</label>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input type="text" id="form2Example1" name="middle_name" class="form-control" value="<%=middle_name%>"/>
+                        <label class="form-label" for="form2Example1">middle Name</label>
+                      </div>
+
+                    
+                      <div class="form-outline mb-4">
+                        <input type="text" id="form2Example1" name="last_name" class="form-control" value="<%=last_name%>"/>
+                        <label class="form-label" for="form2Example1">Last Name</label>
+                      </div>
+
+
+                    
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input type="email" id="form2Example1" name="email" class="form-control" value="<%=email%>"/>
+                      <label class="form-label" for="form2Example1">Email address</label>
+                    </div>
+
+
+
+                    <div class="form-outline mb-4">
+                        <input type="text" id="form2Example1" name="address_no" class="form-control" value="<%=address_no%>"/>
+                        <label class="form-label" for="form2Example1">Address</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="text" id="form2Example1" name="street" class="form-control" value="<%=street%>"/>
+                        <label class="form-label" for="form2Example1">street</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="text" id="form2Example1" name="state" class="form-control" value="<%=state%>"/>
+                        <label class="form-label" for="form2Example1">state</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="text" id="form2Example1" name="user_name" class="form-control" value="<%=user_name%>"/>
+                        <label class="form-label" for="form2Example1">User Name</label>
+                    </div>
+                  
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                      <input type="password" id="form2Example2" class="form-control" name="password" value="<%=password%>"/>
+                      <label class="form-label" for="form2Example2">Password</label>
+                    </div>
+                  
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                      
+                  
+                      <div class="col">
+                        <!-- Simple link -->
+                        <a href="#!">Forgot password?</a>
+                      </div>
+                    </div>
+                  
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+                  
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                      <p>already a member? <a href="/login">Login</a></p>
+                      
+                     
+                    </div>
+                  </form>
+
+
+            </div>
+
+
+
+
+</div>
+    
+<%- include('footer') , {user} %>
+
+
+
