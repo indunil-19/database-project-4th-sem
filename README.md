@@ -1,8 +1,9 @@
 # database-project-4th-sem
 
-##Guide
+## Guide
 
-##Node.js setup
+## Node.js setup
+
 First clone this project directory.
 
 ```https://github.com/indunil-19/database-project-4th-sem```
