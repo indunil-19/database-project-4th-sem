@@ -1,0 +1,76 @@
+   <%- include('header'), {user} %>
+
+   
+
+
+<div class="container">
+
+    <div class="row justify-content-center" style="margin-top: 100px;">
+
+        <div><% if (error) {%>
+            <div class="alert alert-danger" role="alert">
+                <%=error%>
+               </div>
+        <% } %></div>
+        <div><% if (success) {%>
+            <div class="alert alert-success" role="alert">
+                <%=success%>
+               </div>
+        <% } %></div>
+    
+    
+    </div>
+
+
+
+            <div class="row justify-content-center">
+                <form method="post" action="/login" style="max-width: 500px; border:rgba(0, 0, 0, 0.247) solid 2px; padding: 30px;">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input type="email" id="form2Example1" name="email" class="form-control" value="<%=email%>"/>
+                      <label class="form-label" for="form2Example1">Email address</label>
+                    </div>
+                  
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                      <input type="password" id="form2Example2" class="form-control" name="password" value="<%=password%>"/>
+                      <label class="form-label" for="form2Example2">Password</label>
+                    </div>
+                  
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                      
+                  
+                      <div class="col">
+                        <!-- Simple link -->
+                        <a href="#!">Forgot password?</a>
+                      </div>
+                    </div>
+                  
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                  
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                      <p>Not a member? <a href="/register">Register</a></p>
+                      
+                     
+                    </div>
+                  </form>
+
+
+            </div>
+
+
+
+
+</div>
+
+
+
+        
+        
+   
+
+
+<%- include("footer"), {user} %>
